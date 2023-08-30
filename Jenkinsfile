@@ -18,10 +18,10 @@ node {
      }
      stage (' deploy to k8s'){
      sshagent(['kubernetes_pem']) {
-               sh " scp -o stricthostkeychecking=no mvn-web-app3-deployment.yaml ubuntu@54.91.203.20:/home/ubuntu"
-               sh " scp -o stricthostkeychecking=no mvn-web-app3-service.yaml ubuntu@54.91.203.20:/home/ubuntu"        
-               sh " ssh ubuntu@54.91.203.20  kubectl apply -f mvn-web-app3-deployment.yaml"
-               sh " ssh ubuntu@54.91.203.20  kubectl apply -f mvn-web-app3-service.yaml"
+               sh " scp -o stricthostkeychecking=no mvn-web-app3-deployment.yaml ubuntu@18.204.199.199:/home/ubuntu"
+               sh " scp -o stricthostkeychecking=no mvn-web-app3-service.yaml ubuntu@18.204.199.199:/home/ubuntu"        
+               sh " ssh ubuntu@18.204.199.199  kubectl apply -f mvn-web-app3-deployment.yaml"
+               sh " ssh ubuntu@18.204.199.199  kubectl apply -f mvn-web-app3-service.yaml"
           }
        }
      }
