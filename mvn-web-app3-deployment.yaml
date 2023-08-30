@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mvn-web-app3-container
-        image: mydocker1405/mvn-web-app3:3
+        image: mydocker1405/mvn-web-app3:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
